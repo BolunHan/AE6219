@@ -1,0 +1,452 @@
+<!DOCTYPE html><html><head>
+      <title>assignment1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Bolun\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.10\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="problem-1">Problem 1</h1>
+
+<ol>
+<li>We import dataset into the global env with following code</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> library<span class="token punctuation">(</span>readr<span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> tute1 <span class="token operator">&lt;-</span> read_csv<span class="token punctuation">(</span><span class="token string">&quot;Downloads/tute1.csv&quot;</span><span class="token punctuation">)</span>
+</pre><ol start="2">
+<li>We use <code>autoplot</code> the graphically show the dataset</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> tute1 <span class="token operator">=</span> ts<span class="token punctuation">(</span>tute1<span class="token punctuation">[</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>start <span class="token operator">=</span> <span class="token number">1981</span><span class="token punctuation">,</span> frequency <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> library<span class="token punctuation">(</span>fpp2<span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> autoplot<span class="token punctuation">(</span>tute1<span class="token punctuation">,</span> facets <span class="token operator">=</span> <span class="token boolean">TRUE</span><span class="token punctuation">)</span>
+</pre><p><img src="./p1.png" alt="p1.png"></p>
+<p>now we try without <code>facets = TRUE</code> we have</p>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> autoplot<span class="token punctuation">(</span>tute1<span class="token punctuation">)</span>
+</pre><p><img src="./p2.png" alt="p2.png"></p>
+<p>As we can see, with <code>facets = TRUE</code>, the image will spend different columns in different subplots. This is useful if the series having different scales.</p>
+<p>Whereas if no parameter is passed and the default <code>facets = FALSE</code> is used, then it will draw different columns (series) in the same plot.</p>
+<h1 class="mume-header" id="problem-2">Problem 2</h1>
+
+<h2 class="mume-header" id="2a">2.a</h2>
+
+<p>We import the dataset with</p>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> retaildata <span class="token operator">&lt;-</span> readxl<span class="token operator">::</span>read_excel<span class="token punctuation">(</span><span class="token string">&quot;retail.xlsx&quot;</span><span class="token punctuation">,</span> skip<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+</pre><p>Alternatively, we can also import the data using GUI, note that we need to set <code>Skip = 1</code> to drop the first row.</p>
+<p><img src="./p3.png" alt="p3.png"></p>
+<h2 class="mume-header" id="2b">2.b</h2>
+
+<p>Now we choose column <code>A3349414R</code>, the turnover of Victoria liquor sales</p>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> liquor <span class="token operator">&lt;-</span> ts<span class="token punctuation">(</span>retaildata<span class="token punctuation">[</span><span class="token punctuation">,</span> <span class="token string">&quot;A3349414R&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> frequency <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">,</span> start <span class="token operator">=</span> c<span class="token punctuation">(</span><span class="token number">1982</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="2c">2.c</h2>
+
+<ol>
+<li>we use <code>autoplot</code> to view the general pattern of our data</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> autoplot<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+</pre><p><img src="./p4.png" alt="p4.png"></p>
+<p>As we can see, the data is showing strong trend and seasonal features.</p>
+<ol start="2">
+<li>we use <code>ggseasonplot</code> to exam the seasonal pattern</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> ggseasonplot<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+</pre><p>The series in each year are showing seasonal pattern, sales are high during Nov. to Mar. While relatively low in the rest of the year.</p>
+<p><img src="./p5.png" alt="p5.png"></p>
+<ol start="3">
+<li>use <code>ggsubseriesplot</code> and <code>gglagplot</code> to exam the trend in seasonal pattern</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> ggsubseriesplot<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+</pre><p><img src="./p6.png" alt="p6.png"></p>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> gglagplot<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+</pre><p><img src="./p7.png" alt="p7.png"></p>
+<p>The plots compares the sales of same month, which is showing a clear upwards trend.</p>
+<ol start="4">
+<li>use <code>ggAcf</code> to exam auto-correlation</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> ggAcf<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+</pre><p><img src="./p8.png" alt="p8.png"></p>
+<p>The auto-correlation of the data is significant.</p>
+<p>Overall we can find significant seasonal characteristics in the data, as well as a strong upward trend.</p>
+<h1 class="mume-header" id="problem-3">Problem 3</h1>
+
+<p>We use <code>BoxCox.lambda</code> function to calculate the lambda for our transformation.</p>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> lambda <span class="token operator">&lt;-</span> BoxCox.lambda<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> lambda
+<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span><span class="token number">0.04159144</span>
+</pre><pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> liquor_transformed <span class="token operator">&lt;-</span> BoxCox<span class="token punctuation">(</span>liquor<span class="token punctuation">,</span> lambda<span class="token punctuation">)</span>
+</pre><p>The transformed data is shown as below.</p>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> plot_data <span class="token operator">&lt;-</span> data.frame<span class="token punctuation">(</span>year <span class="token operator">=</span> time<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span><span class="token punctuation">,</span> liquor <span class="token operator">=</span> liquor<span class="token punctuation">,</span> liquor_transformed <span class="token operator">=</span> liquor_transformed<span class="token punctuation">)</span>
+<span class="token operator">&gt;</span>
+<span class="token operator">&gt;</span> coeff <span class="token operator">=</span> liquor<span class="token punctuation">[</span>length<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">/</span> liquor_transformed<span class="token punctuation">[</span>length<span class="token punctuation">(</span>liquor_transformed<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;</span> intercept <span class="token operator">&lt;-</span> liquor_transformed<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> coeff <span class="token operator">-</span> liquor<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;</span>
+<span class="token operator">&gt;</span> ggplot<span class="token punctuation">(</span>plot_data<span class="token punctuation">,</span> aes<span class="token punctuation">(</span>x <span class="token operator">=</span> year<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+<span class="token operator">+</span>     geom_line<span class="token punctuation">(</span>aes<span class="token punctuation">(</span>y <span class="token operator">=</span> liquor<span class="token punctuation">,</span> color <span class="token operator">=</span> <span class="token string">&quot;Original Liquor&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+<span class="token operator">+</span>     geom_line<span class="token punctuation">(</span>aes<span class="token punctuation">(</span>y <span class="token operator">=</span> liquor_transformed <span class="token operator">*</span> coeff <span class="token operator">-</span> intercept<span class="token punctuation">,</span> color <span class="token operator">=</span> <span class="token string">&quot;Transformed Liquor&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+<span class="token operator">+</span>     scale_color_manual<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;Y series&quot;</span><span class="token punctuation">,</span> values <span class="token operator">=</span> c<span class="token punctuation">(</span><span class="token string">&quot;Original Liquor&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Transformed Liquor&quot;</span> <span class="token operator">=</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+<span class="token operator">+</span>     labs<span class="token punctuation">(</span>y <span class="token operator">=</span> <span class="token string">&quot;Original Liquor&quot;</span><span class="token punctuation">)</span> <span class="token operator">+</span>
+<span class="token operator">+</span>     scale_y_continuous<span class="token punctuation">(</span>sec.axis <span class="token operator">=</span> sec_axis<span class="token punctuation">(</span>trans <span class="token operator">=</span> <span class="token operator">~</span> <span class="token punctuation">(</span>. <span class="token operator">+</span> intercept<span class="token punctuation">)</span> <span class="token operator">/</span> coeff<span class="token punctuation">,</span>name <span class="token operator">=</span> <span class="token string">&quot;Transformed Liquor&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><p><img src="630ebbe7-98ce-4bd5-a704-dfa2d2870351-1.png" alt="Alt text"></p>
+<h1 class="mume-header" id="question-4">Question 4</h1>
+
+<ol>
+<li>split the data into training and test set</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> liquor.train <span class="token operator">&lt;-</span> window<span class="token punctuation">(</span>liquor<span class="token punctuation">,</span> end<span class="token operator">=</span>c<span class="token punctuation">(</span><span class="token number">2010</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> liquor.test <span class="token operator">&lt;-</span> window<span class="token punctuation">(</span>liquor<span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">2011</span><span class="token punctuation">)</span>
+</pre><ol start="2">
+<li>plot the training and test set</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> autoplot<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span> 
+<span class="token operator">+</span>     autolayer<span class="token punctuation">(</span>liquor.train<span class="token punctuation">,</span> series<span class="token operator">=</span><span class="token string">&quot;Training&quot;</span><span class="token punctuation">)</span> 
+<span class="token operator">+</span>     autolayer<span class="token punctuation">(</span>liquor.test<span class="token punctuation">,</span> series<span class="token operator">=</span><span class="token string">&quot;Test&quot;</span><span class="token punctuation">)</span>
+</pre><p>and we have</p>
+<p><img src="7b229f1d-c741-407e-944b-1e07367fec63.png" alt="Alt text"></p>
+<ol start="3">
+<li>calculate the seasonal naive forecast</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> fc <span class="token operator">&lt;-</span> snaive<span class="token punctuation">(</span>liquor.train<span class="token punctuation">)</span>
+<span class="token operator">&gt;</span> fc
+         Point Forecast    Lo <span class="token number">80</span>    Hi <span class="token number">80</span>     Lo <span class="token number">95</span>    Hi <span class="token number">95</span>
+Jan <span class="token number">2011</span>          <span class="token number">134.8</span> <span class="token number">123.6507</span> <span class="token number">145.9493</span> <span class="token number">117.74858</span> <span class="token number">151.8514</span>
+Feb <span class="token number">2011</span>          <span class="token number">117.1</span> <span class="token number">105.9507</span> <span class="token number">128.2493</span> <span class="token number">100.04858</span> <span class="token number">134.1514</span>
+Mar <span class="token number">2011</span>          <span class="token number">138.3</span> <span class="token number">127.1507</span> <span class="token number">149.4493</span> <span class="token number">121.24858</span> <span class="token number">155.3514</span>
+Apr <span class="token number">2011</span>          <span class="token number">125.6</span> <span class="token number">114.4507</span> <span class="token number">136.7493</span> <span class="token number">108.54858</span> <span class="token number">142.6514</span>
+May <span class="token number">2011</span>          <span class="token number">124.5</span> <span class="token number">113.3507</span> <span class="token number">135.6493</span> <span class="token number">107.44858</span> <span class="token number">141.5514</span>
+Jun <span class="token number">2011</span>          <span class="token number">121.0</span> <span class="token number">109.8507</span> <span class="token number">132.1493</span> <span class="token number">103.94858</span> <span class="token number">138.0514</span>
+Jul <span class="token number">2011</span>          <span class="token number">132.4</span> <span class="token number">121.2507</span> <span class="token number">143.5493</span> <span class="token number">115.34858</span> <span class="token number">149.4514</span>
+Aug <span class="token number">2011</span>          <span class="token number">135.3</span> <span class="token number">124.1507</span> <span class="token number">146.4493</span> <span class="token number">118.24858</span> <span class="token number">152.3514</span>
+Sep <span class="token number">2011</span>          <span class="token number">143.5</span> <span class="token number">132.3507</span> <span class="token number">154.6493</span> <span class="token number">126.44858</span> <span class="token number">160.5514</span>
+Oct <span class="token number">2011</span>          <span class="token number">161.2</span> <span class="token number">150.0507</span> <span class="token number">172.3493</span> <span class="token number">144.14858</span> <span class="token number">178.2514</span>
+Nov <span class="token number">2011</span>          <span class="token number">167.8</span> <span class="token number">156.6507</span> <span class="token number">178.9493</span> <span class="token number">150.74858</span> <span class="token number">184.8514</span>
+Dec <span class="token number">2011</span>          <span class="token number">232.1</span> <span class="token number">220.9507</span> <span class="token number">243.2493</span> <span class="token number">215.04858</span> <span class="token number">249.1514</span>
+Jan <span class="token number">2012</span>          <span class="token number">134.8</span> <span class="token number">119.0325</span> <span class="token number">150.5675</span> <span class="token number">110.68565</span> <span class="token number">158.9143</span>
+Feb <span class="token number">2012</span>          <span class="token number">117.1</span> <span class="token number">101.3325</span> <span class="token number">132.8675</span>  <span class="token number">92.98565</span> <span class="token number">141.2143</span>
+Mar <span class="token number">2012</span>          <span class="token number">138.3</span> <span class="token number">122.5325</span> <span class="token number">154.0675</span> <span class="token number">114.18565</span> <span class="token number">162.4143</span>
+Apr <span class="token number">2012</span>          <span class="token number">125.6</span> <span class="token number">109.8325</span> <span class="token number">141.3675</span> <span class="token number">101.48565</span> <span class="token number">149.7143</span>
+May <span class="token number">2012</span>          <span class="token number">124.5</span> <span class="token number">108.7325</span> <span class="token number">140.2675</span> <span class="token number">100.38565</span> <span class="token number">148.6143</span>
+Jun <span class="token number">2012</span>          <span class="token number">121.0</span> <span class="token number">105.2325</span> <span class="token number">136.7675</span>  <span class="token number">96.88565</span> <span class="token number">145.1143</span>
+Jul <span class="token number">2012</span>          <span class="token number">132.4</span> <span class="token number">116.6325</span> <span class="token number">148.1675</span> <span class="token number">108.28565</span> <span class="token number">156.5143</span>
+Aug <span class="token number">2012</span>          <span class="token number">135.3</span> <span class="token number">119.5325</span> <span class="token number">151.0675</span> <span class="token number">111.18565</span> <span class="token number">159.4143</span>
+Sep <span class="token number">2012</span>          <span class="token number">143.5</span> <span class="token number">127.7325</span> <span class="token number">159.2675</span> <span class="token number">119.38565</span> <span class="token number">167.6143</span>
+Oct <span class="token number">2012</span>          <span class="token number">161.2</span> <span class="token number">145.4325</span> <span class="token number">176.9675</span> <span class="token number">137.08565</span> <span class="token number">185.3143</span>
+Nov <span class="token number">2012</span>          <span class="token number">167.8</span> <span class="token number">152.0325</span> <span class="token number">183.5675</span> <span class="token number">143.68565</span> <span class="token number">191.9143</span>
+Dec <span class="token number">2012</span>          <span class="token number">232.1</span> <span class="token number">216.3325</span> <span class="token number">247.8675</span> <span class="token number">207.98565</span> <span class="token number">256.2143</span>
+</pre><ol start="4">
+<li>Calculate the accuracy</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> accuracy<span class="token punctuation">(</span>fc<span class="token punctuation">,</span> liquor.test<span class="token punctuation">)</span>
+                    ME      RMSE       MAE      MPE      MAPE     MASE      ACF1 Theil&apos;s U
+Training set  <span class="token number">4.455255</span>  <span class="token number">8.699864</span>  <span class="token number">5.818619</span>  <span class="token number">6.15400</span>  <span class="token number">9.948117</span> <span class="token number">1.000000</span> <span class="token number">0.7261600</span>        <span class="token keyword keyword-NA">NA</span>
+Test set     <span class="token number">19.170833</span> <span class="token number">22.956217</span> <span class="token number">19.520833</span> <span class="token number">11.59039</span> <span class="token number">11.813322</span> <span class="token number">3.354891</span> <span class="token number">0.5801161</span> <span class="token number">0.7479721</span>
+</pre><ol start="4">
+<li>check the residual with</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> checkresiduals<span class="token punctuation">(</span>fc<span class="token punctuation">)</span>
+
+	Ljung<span class="token operator">-</span>Box test
+
+data<span class="token operator">:</span>  Residuals from Seasonal naive method
+Q<span class="token operator">*</span> <span class="token operator">=</span> <span class="token number">783.91</span><span class="token punctuation">,</span> df <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">,</span> p<span class="token operator">-</span>value <span class="token operator">&lt;</span> <span class="token number">2.2e-16</span>
+
+Model df<span class="token operator">:</span> <span class="token number">0.</span>   Total lags used<span class="token operator">:</span> <span class="token number">24</span>
+</pre><p><img src="d563e7f8-b154-42bd-a04f-7d132df655fd.png" alt="Alt text"></p>
+<p>as we can see from the ACF plot, the residuals are having significant auto-correlation.</p>
+<p>the distribution graph is showing residual suffers from fat tail. The distribution is far from normal.</p>
+<ol start="5">
+<li>now we compare the accuracy from 10%, 20%, 30%, 40% split of training, test set</li>
+</ol>
+<pre data-role="codeBlock" data-info="R" class="language-r">index <span class="token operator">&lt;-</span> time<span class="token punctuation">(</span>liquor<span class="token punctuation">)</span>
+accuracy_results <span class="token operator">&lt;-</span> list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Loop through different splits (10%, 20%, 30%, 40%)</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span>split_percentage <span class="token keyword keyword-in">in</span> c<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0.4</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  split_index <span class="token operator">&lt;-</span> ceiling<span class="token punctuation">(</span>length<span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> split_percentage<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  liquor.train <span class="token operator">&lt;-</span> window<span class="token punctuation">(</span>liquor<span class="token punctuation">,</span> end <span class="token operator">=</span> index<span class="token punctuation">[</span>split_index<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  liquor.test <span class="token operator">&lt;-</span> window<span class="token punctuation">(</span>liquor<span class="token punctuation">,</span> start <span class="token operator">=</span> index<span class="token punctuation">[</span>split_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  
+  fc <span class="token operator">&lt;-</span> snaive<span class="token punctuation">(</span>liquor.train<span class="token punctuation">)</span>
+  acc <span class="token operator">&lt;-</span> accuracy<span class="token punctuation">(</span>fc<span class="token punctuation">,</span> liquor.test<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">]</span>
+  accuracy_results<span class="token punctuation">[</span><span class="token punctuation">[</span>as.character<span class="token punctuation">(</span>split_percentage<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> acc
+<span class="token punctuation">}</span>
+accuracy_df <span class="token operator">&lt;-</span> do.call<span class="token punctuation">(</span>rbind<span class="token punctuation">,</span> accuracy_results<span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="R" class="language-r"><span class="token operator">&gt;</span> print<span class="token punctuation">(</span>accuracy_df<span class="token punctuation">)</span>
+           ME      RMSE       MAE       MPE      MAPE     MASE        ACF1 Theil&apos;s U
+<span class="token number">0.1</span> <span class="token number">21.791667</span> <span class="token number">26.223320</span> <span class="token number">22.141667</span> <span class="token number">12.972594</span> <span class="token number">13.195524</span> <span class="token number">3.893997</span>  <span class="token number">0.56589226</span> <span class="token number">0.8766350</span>
+<span class="token number">0.2</span> <span class="token number">16.441667</span> <span class="token number">22.791300</span> <span class="token number">17.783333</span> <span class="token number">12.956038</span> <span class="token number">14.192135</span> <span class="token number">3.899504</span>  <span class="token number">0.79441842</span> <span class="token number">0.9984541</span>
+<span class="token number">0.3</span>  <span class="token number">5.920833</span>  <span class="token number">8.718634</span>  <span class="token number">7.179167</span>  <span class="token number">6.111223</span>  <span class="token number">7.764106</span> <span class="token number">1.675226</span>  <span class="token number">0.49642568</span> <span class="token number">0.4649661</span>
+<span class="token number">0.4</span>  <span class="token number">4.512500</span>  <span class="token number">6.532005</span>  <span class="token number">5.529167</span>  <span class="token number">6.100946</span>  <span class="token number">7.805474</span> <span class="token number">1.434688</span> <span class="token operator">-</span><span class="token number">0.02042785</span> <span class="token number">0.3998734</span>
+</pre><p>We can observe an increase in RMSE, MAE, MPE and other accuracy measurements as the training set size increases. This is generally <strong>counter-intuitive</strong>.</p>
+<ul>
+<li>This may come from the gradual increase in the residuals.</li>
+<li>The residuals of the forecast in the relative old data are small and of the &quot;new&quot; data are large.</li>
+<li>Therefore including more of older data in the test set will increase the prediction accuracy instead of decreasing it.</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
